@@ -1,9 +1,8 @@
 body {
-    background-image: url('../resources/Group\ 1.png');
+    background-image: url('../resources/trainings_bg.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 #training_main {
     display: flex;
@@ -18,22 +17,30 @@ body {
     flex-wrap: wrap-reverse;
 }
 
+#head2 {
+    display: none;
+}
+
 #child_1 {
     font-size: 2.3rem;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, #02E8FF, #0071FC, #0071FC, #FE0000, #FE0000);
-    color: transparent;
-    -webkit-background-clip: text;
     padding-left: 10rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#heading,
+#heading2 {
+    color: #FE0000;
+}
 
+#head2_heading {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 #logo {
     width: 10rem;
-
 }
 
 #training_row2 {
@@ -65,53 +72,80 @@ body {
 }
 
 
-@media (max-width: 790px) {
+@media (max-width: 848px) {
     #child_1 {
         font-size: 2rem;
         display: block;
         padding-left: 16%;
     }
+
     #logo {
         width: 8rem;
         float: right;
     }
-}
-@media (max-width: 620px) {
-    #child_1 {
-        font-size: 2rem;
-        display: block;
-        padding-right: 18%;
+
+    #heading2 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 3rem;
     }
-    #logo {
-        width: 8rem;
+
+    #training_main {
+        row-gap: 0rem;
     }
-    #training_row1{
-        padding-left: 15rem;
+
+    #training_row2 {
+        column-gap: 10rem;
+        row-gap: 1rem;
+        max-width: 35rem;
     }
+
     #image {
-        width: 20rem;
+        width: 14rem;
     }
 }
 
-@media (max-width: 535px){
-    #child_1 {
-        font-size: 1.6rem;
-        display: block;
-        padding-right: 10%;
-        padding-left: 0;
+@media (max-width: 620px) {
+    #head {
+        display: none;
     }
+
+    #head2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #heading2 {
+        text-align: center;
+        font-size: 4rem;
+        display: inline;
+    }
+
+    #logo_block {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #training_row2 {
+        column-gap: 10rem;
+        row-gap: 1.2rem;
+        max-width: 20rem;
+        margin-top: 0;
+    }
+
+    #image {
+        width: 13rem;
+    }
+
     #logo {
-        width: 7rem;
+        width: 8rem;
     }
-    #training_row1{
-        padding-left: 9rem;
-    }
-}
-@media (max-width: 376px) {
-    #training_row1{
-        padding-left: 7.5rem;
-    }
-    #child_1 {
-        padding-left: 1.5rem;
+
+    #training_main {
+        row-gap: 1rem;
     }
 }
